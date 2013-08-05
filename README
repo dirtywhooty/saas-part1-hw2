@@ -1,0 +1,58 @@
+ Deploy RottenPotatoes and Enhancement #1 
+
+ 	Part A —Add some movies to RottenPotatoes, and deploy it to the world
+
+ 	Part B — RottenPotatoes Enhancement #1: Sorting the list of all movies
+
+ 	Tasks:
+		App
+			should respond to simple request 
+		Table header
+			should have link to sort by title 
+			should have link to sort by release date 
+		Table
+			should be sortable by title 
+			should be sortable by release date 
+			should highlight title header when sorted 
+			should highlight release date header when sorted 
+
+
+RottenPotatoes Enhancement #2: Filter the List of Movies
+
+	Tasks:
+
+		GET /movies
+			should be successful
+			should have #ratings_form form 
+			should have #ratings_submit button 
+			should have checkboxes 
+		When I first visit the page
+			should have all checkboxes checked 
+			should have movies visible 
+		when selecting a movie rating
+			should only display movies of that rating 
+			should automatically check the selected rating in the response 
+		when selecting a sort column
+			should preserve the ratings filter 
+
+RottenPotatoes Enhancement #3: Remember the Settings
+
+	Tasks:
+
+		GET /movies
+			basic tests
+			should be successful
+			should have a form with id ratings_form
+			should have #ratings_submit button
+			should have checkboxes
+			should have #movies
+			should have #title_header
+			should have #release_date_header
+		when selecting a movie rating
+			should remember the rating selected 
+			should allow new ratings to be selected 
+			should redirect to a RESTful route 
+		when selecting a sort field
+			should remember the sort order 
+			should allow a new sort order to be selected 
+			should redirect to a RESTful route 
